@@ -1,10 +1,4 @@
 import styled from "styled-components";
-import { Parallax } from "react-scroll-parallax";
-
-export const LandingSectionContainer = styled(Parallax)`
-  width: 100%;
-  height: 1024px;
-`;
 
 export const VideoContainer = styled.div`
   width: 100vw;

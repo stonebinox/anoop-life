@@ -3,7 +3,6 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
 import {
-  LandingSectionContainer,
   VideoContainer,
   VideoContent,
   NameContainer,
@@ -16,9 +15,10 @@ import {
   CarouselDescription,
 } from "./index.styles";
 import LandingVideo from "../assets/videos/landing.mp4";
+import { SectionContainer } from "../category/common.styles";
 
 export const LandingSection = () => (
-  <LandingSectionContainer speed={-5}>
+  <SectionContainer translateY={[0, -20]}>
     <SectionContent>
       <NameContainer>
         <FirstName>ANOOP</FirstName>
@@ -70,5 +70,5 @@ export const LandingSection = () => (
         type="video/mp4"
       />
     </VideoContainer>
-  </LandingSectionContainer>
+  </SectionContainer>
 );
