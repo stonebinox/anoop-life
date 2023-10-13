@@ -30,7 +30,7 @@ const Category = styled(Parallax)`
   width: 33%;
   transition: all 0.2s ease;
   cursor: pointer;
-  background: url(${({ image }) => image}) no-repeat;
+  background: url(${({ image }) => image}) center;
   background-size: cover;
 
   &:hover {

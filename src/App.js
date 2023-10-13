@@ -3,6 +3,7 @@ import { LandingSection } from "./landing";
 import { Navbar } from "./navbar";
 import { CategorySection } from "./category";
 import { TechSection } from "./tech";
+import { WorkSection } from "./work";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <LandingSection />
         <CategorySection />
         <TechSection />
+        <WorkSection />
       </div>
     </ParallaxProvider>
   );
