@@ -2,6 +2,7 @@ import { ParallaxProvider } from "react-scroll-parallax";
 import { LandingSection } from "./landing";
 import { Navbar } from "./navbar";
 import { CategorySection } from "./category";
+import { TechSection } from "./tech";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Navbar />
         <LandingSection />
         <CategorySection />
+        <TechSection />
       </div>
     </ParallaxProvider>
   );
