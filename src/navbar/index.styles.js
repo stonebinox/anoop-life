@@ -1,8 +1,19 @@
 import styled from "styled-components";
 
+export const NavbarWrapper = styled.div`
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+`;
+
 export const NavbarContainer = styled.div`
   display: flex;
-  background-color: #000;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
   flex-direction: row;
   width: 100%;
   justify-content: space-between;

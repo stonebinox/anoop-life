@@ -7,21 +7,24 @@ import {
   LogoItem,
   NavLinksContainer,
   NavLink,
+  NavbarWrapper,
 } from "./index.styles";
 
 export const Navbar = () => (
-  <NavbarContainer>
-    <LogoHolder>
-      <LogoItem src={Logo} />
-    </LogoHolder>
-    <NavLinksContainer>
-      <NavLink href="#" className="active">
-        about
-      </NavLink>
-      <NavLink href="#">work</NavLink>
-      <NavLink href="#">portfolio</NavLink>
-      <NavLink href="#">media</NavLink>
-      <NavLink href="#">contact</NavLink>
-    </NavLinksContainer>
-  </NavbarContainer>
+  <NavbarWrapper>
+    <NavbarContainer>
+      <LogoHolder>
+        <LogoItem src={Logo} />
+      </LogoHolder>
+      <NavLinksContainer>
+        <NavLink href="#" className="active">
+          about
+        </NavLink>
+        <NavLink href="#">work</NavLink>
+        <NavLink href="#">portfolio</NavLink>
+        <NavLink href="#">media</NavLink>
+        <NavLink href="#">contact</NavLink>
+      </NavLinksContainer>
+    </NavbarContainer>
+  </NavbarWrapper>
 );
