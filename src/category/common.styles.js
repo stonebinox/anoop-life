@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const SectionContainer = styled(Parallax)`
   width: 100%;
-  height: 1024px;
+  height: 100vh;
 `;
 
 export const Button = styled.div`

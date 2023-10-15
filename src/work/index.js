@@ -1,27 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
 import { Button, SectionContainer } from "../category/common.styles";
-import Andela from "../assets/andela.png";
-import AndelaBG from "../assets/andela-bg.png";
 import Arrow from "../assets/arrow.png";
-
-const workHistory = [
-  {
-    icon: Andela,
-    background: AndelaBG,
-    role: "Head of Web Development (Marketing)",
-    duration: "2021 - Present",
-    description:
-      "Planned and developed all public facing pages and screens of the Andela brand. Rebranded the whole website and integrated numerous onboarding flows.",
-  },
-];
+import { workHistory } from "./work-history";
 
 const WorkContainer = styled.div`
   width: 100%;
   height: 100%;
   background: url(${({ image }) => image}) center;
   background-size: cover;
+  transition: all 0.2s ease;
 `;
 
 const WorkContentContainer = styled.div`
@@ -45,7 +34,7 @@ const SectionTitle = styled.div`
 const WorkIcon = styled.img`
   width: 360px;
   border: 0;
-  margin-top: 128px;
+  margin-top: 64px;
 `;
 
 const WorkTitle = styled.div`
@@ -63,26 +52,74 @@ const WorkDescription = styled(WorkTitle)`
   margin-bottom: 32px;
 `;
 
+const ButtonHolder = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+`;
+
+const ArrowButton = styled.img`
+  &.prev {
+    transform: rotate(180deg);
+  }
+`;
+
 export const WorkSection = () => {
-  const [selectedWork, setSelectedWork] = useState(workHistory[0]);
+  const [selectedWork, setSelectedWork] = useState(0);
+
+  const nextWork = () => {
+    if (selectedWork + 1 >= workHistory.length) {
+      setSelectedWork(0);
+      return;
+    }
+
+    setSelectedWork(selectedWork + 1);
+  };
+
+  const prevWork = () => {
+    if (selectedWork - 1 < 0) {
+      setSelectedWork(workHistory.length - 1);
+      return;
+    }
+
+    setSelectedWork(selectedWork - 1);
+  };
+
+  useEffect(() => {
+    workHistory.forEach((item) => {
+      const img = new Image();
+      img.src = item.background;
+      img.onload = () => {
+        console.log("loaded img");
+      };
+    });
+  }, []);
 
   return (
     <SectionContainer speed={-10}>
-      <WorkContainer image={selectedWork.background}>
+      <WorkContainer image={workHistory[selectedWork].background}>
         <WorkContentContainer>
           <SectionTitle>Work History</SectionTitle>
-          <WorkIcon src={selectedWork.icon} />
+          <WorkIcon src={workHistory[selectedWork].icon} />
           <WorkTitle>
-            {selectedWork.role} &bull; {selectedWork.duration}
+            {workHistory[selectedWork].role} &bull;{" "}
+            {workHistory[selectedWork].duration}
           </WorkTitle>
           <WorkDescription>
-            Planned and developed all public facing pages and screens of the
-            Andela brand. Rebranded the whole website and integrated numerous
-            onboarding flows.
+            {workHistory[selectedWork].description}
           </WorkDescription>
-          <Button>
-            <img src={Arrow} alt="Next" />
-          </Button>
+          <ButtonHolder>
+            <Button onClick={prevWork}>
+              <ArrowButton src={Arrow} alt="Previous" className="prev" />
+            </Button>
+            <Button onClick={nextWork}>
+              <ArrowButton src={Arrow} alt="Next" />
+            </Button>
+          </ButtonHolder>
         </WorkContentContainer>
       </WorkContainer>
     </SectionContainer>
