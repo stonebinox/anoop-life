@@ -7,6 +7,7 @@ import { TechSection } from "./tech";
 import { WorkSection, WorkSection as MediaSection } from "./work";
 import { workHistory } from "./work/work-history";
 import { mediaList } from "./media/media-mentions";
+import { PortfolioSection } from "./portfolio-intro";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <TechSection />
         <WorkSection data={workHistory} />
         <MediaSection data={mediaList} white />
+        <PortfolioSection />
       </div>
     </ParallaxProvider>
   );

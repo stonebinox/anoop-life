@@ -20,7 +20,7 @@ export const TextWrapper = styled.div`
 export const TextTitle = styled.div`
   font-family: "Robot-Light", sans-serif;
   font-size: 50px;
-  color: #efefef;
+  color: ${({ white }) => (white ? `#333` : `#efefef`)};
   font-weight: 300;
   text-align: left;
 `;
