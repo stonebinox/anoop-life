@@ -1,9 +1,12 @@
 import { ParallaxProvider } from "react-scroll-parallax";
+
 import { LandingSection } from "./landing";
 import { Navbar } from "./navbar";
 import { CategorySection } from "./category";
 import { TechSection } from "./tech";
-import { WorkSection } from "./work";
+import { WorkSection, WorkSection as MediaSection } from "./work";
+import { workHistory } from "./work/work-history";
+import { mediaList } from "./media/media-mentions";
 
 function App() {
   return (
@@ -13,7 +16,8 @@ function App() {
         <LandingSection />
         <CategorySection />
         <TechSection />
-        <WorkSection />
+        <WorkSection data={workHistory} />
+        <MediaSection data={mediaList} white />
       </div>
     </ParallaxProvider>
   );

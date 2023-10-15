@@ -18,6 +18,7 @@ export const workHistory = [
     role: "Head of Web Development (Marketing)",
     duration: "2021 - Present",
     description: "A global workforce and recruitment platform for tech.",
+    link: "https://andela.com",
   },
   {
     icon: PL,
@@ -26,6 +27,7 @@ export const workHistory = [
     duration: "2019 - 2021",
     description:
       "Players' Lounge is a platform for gamers to challenge each other, play against each other on all gaming consoles, and make money by winning.",
+    link: "https://playerslounge.com",
   },
   {
     icon: Rentpost,
@@ -34,6 +36,7 @@ export const workHistory = [
     duration: "2018 - 2019",
     description:
       "A property management software suite for real estate agencies, owners, and managers to handle property units, tenants, and marketing strategies.",
+    link: "https://rentpost.com",
   },
   {
     icon: Spectral,
@@ -42,6 +45,7 @@ export const workHistory = [
     duration: "2017 - 2018",
     description:
       "A digital imaging and analysis product-service suite for diagnostic labs, pathologists, doctors, and hospitals.",
+    link: "https://nference.com",
   },
   {
     icon: Dust,
@@ -50,6 +54,7 @@ export const workHistory = [
     duration: "2017 - 2018",
     description:
       "Dust is a platform that helps non-technical founders connect with developers to launch their MVPs in five days for less than $700.",
+    link: null,
   },
   {
     icon: Binox,
@@ -58,5 +63,6 @@ export const workHistory = [
     duration: "2012 - 2017",
     description:
       "Binox is an internet operating system (intOS). Was acquired in 2017.",
+    link: null,
   },
 ];

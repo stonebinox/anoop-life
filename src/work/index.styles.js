@@ -12,7 +12,8 @@ export const WorkContainer = styled.div`
 export const WorkContentContainer = styled(Parallax)`
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.9);
+  background: ${({ white }) =>
+    white ? `rgba(255, 255, 255, 0.9)` : `rgba(0, 0, 0, 0.9)`};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,7 +23,7 @@ export const WorkContentContainer = styled(Parallax)`
 export const SectionTitle = styled.div`
   font-family: "Roboto-Light", sans-serif;
   font-size: 50px;
-  color: #efefef;
+  color: ${({ white }) => (white ? `#333` : `#efefef`)};
   text-align: center;
   font-weight: 300;
 `;
@@ -35,12 +36,13 @@ export const WorkIcon = styled.div`
   margin-bottom: 48px;
   background: url(${({ image }) => image}) no-repeat center;
   background-size: contain;
+  cursor: pointer;
   transition: all 0.2s ease;
 `;
 
 export const WorkTitle = styled.div`
   font-size: 34px;
-  color: #efefef;
+  color: ${({ white }) => (white ? `#333` : `#efefef`)};
   font-family: "Roboto", sans-serif;
   text-align: center;
   margin-top: 24px;
