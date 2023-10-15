@@ -17,8 +17,8 @@ function App() {
         <LandingSection />
         <CategorySection />
         <TechSection />
-        <WorkSection data={workHistory} />
-        <MediaSection data={mediaList} white />
+        <WorkSection id="work" data={workHistory} />
+        <MediaSection id="media" data={mediaList} white />
         <PortfolioSection />
       </div>
     </ParallaxProvider>

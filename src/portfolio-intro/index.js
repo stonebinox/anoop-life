@@ -10,7 +10,12 @@ import {
 
 export const PortfolioSection = () => {
   return (
-    <SectionContainer speed={-10} shouldAlwaysCompleteAnimation white>
+    <SectionContainer
+      id="portfolio"
+      speed={-10}
+      shouldAlwaysCompleteAnimation
+      white
+    >
       <TextContainer translateY={[80, 0]} shouldAlwaysCompleteAnimation>
         <TextWrapper>
           <TextTitle white>Portfolio</TextTitle>

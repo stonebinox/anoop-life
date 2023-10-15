@@ -13,7 +13,7 @@ import {
   ArrowButton,
 } from "./index.styles";
 
-export const WorkSection = ({ data = [], white = null }) => {
+export const WorkSection = ({ data = [], white = null, id }) => {
   const [selectedWork, setSelectedWork] = useState(0);
 
   const nextWork = () => {
@@ -51,7 +51,7 @@ export const WorkSection = ({ data = [], white = null }) => {
   }, [data]);
 
   return (
-    <SectionContainer speed={-10} shouldAlwaysCompleteAnimation>
+    <SectionContainer id={id} speed={-10} shouldAlwaysCompleteAnimation>
       <WorkContainer image={data[selectedWork].background}>
         <WorkContentContainer white={white}>
           <SectionTitle white={white}>Work History</SectionTitle>
