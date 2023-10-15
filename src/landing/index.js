@@ -18,8 +18,8 @@ import LandingVideo from "../assets/videos/landing.mp4";
 import { SectionContainer } from "../category/common.styles";
 
 export const LandingSection = () => (
-  <SectionContainer translateY={[0, -20]}>
-    <SectionContent>
+  <SectionContainer translateY={[0, -10]} shouldAlwaysCompleteAnimation>
+    <SectionContent translateY={[0, 40]} shouldAlwaysCompleteAnimation>
       <NameContainer>
         <FirstName>ANOOP</FirstName>
         <LastName>SANTHANAM</LastName>

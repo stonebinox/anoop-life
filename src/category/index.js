@@ -89,7 +89,7 @@ export const CategorySection = () => {
   }, []);
 
   return (
-    <SectionContainer speed={-10}>
+    <SectionContainer speed={-10} shouldAlwaysCompleteAnimation>
       <CategoryContainer>
         <Category
           translateX={[-20, 0]}

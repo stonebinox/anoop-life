@@ -17,8 +17,7 @@ export const workHistory = [
     background: AndelaBG,
     role: "Head of Web Development (Marketing)",
     duration: "2021 - Present",
-    description:
-      "Planned and developed all public facing pages and screens of the Andela brand. Rebranded the whole website and integrated numerous onboarding flows.",
+    description: "A global workforce and recruitment platform for tech.",
   },
   {
     icon: PL,
@@ -42,7 +41,7 @@ export const workHistory = [
     role: "Senior Software Engineer",
     duration: "2017 - 2018",
     description:
-      "Worked as a cloud engineer/developer/manager and database administrator for the entire cloud setup of the company. I designed, implemented, and developed the entire cloud architecture for all the products and an additional portal for them to manage their products and its customers. Worked on several projects and converted desktop applications to web equivalents.",
+      "A digital imaging and analysis product-service suite for diagnostic labs, pathologists, doctors, and hospitals.",
   },
   {
     icon: Dust,
@@ -58,6 +57,6 @@ export const workHistory = [
     role: "CEO and Co-founder",
     duration: "2012 - 2017",
     description:
-      "Binox is an internet operating system (intOS). Develop the product, find like minded people, direct them, motivate them to do what is necessary; train new recruits, develop business models to generate revenue, team building, etc. All projects were developed end-to-end by me. Was acquired in 2017.",
+      "Binox is an internet operating system (intOS). Was acquired in 2017.",
   },
 ];

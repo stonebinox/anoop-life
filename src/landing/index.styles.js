@@ -1,3 +1,4 @@
+import { Parallax } from "react-scroll-parallax";
 import styled from "styled-components";
 
 export const VideoContainer = styled.div`
@@ -39,7 +40,7 @@ export const LastName = styled(FirstName)`
   font-size: 70px;
 `;
 
-export const SectionContent = styled.div`
+export const SectionContent = styled(Parallax)`
   width: 100%;
   height: 100%;
   display: flex;

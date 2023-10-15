@@ -9,8 +9,8 @@ import {
 } from "./index.styles";
 
 export const TechSection = () => (
-  <SectionContainer speed={-10}>
-    <TextContainer translateY={[60, 0]}>
+  <SectionContainer speed={-10} shouldAlwaysCompleteAnimation>
+    <TextContainer translateY={[60, 0]} shouldAlwaysCompleteAnimation>
       <TextWrapper>
         <TextTitle>Tech Stack</TextTitle>
         <TextDescription>
