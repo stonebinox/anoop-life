@@ -44,9 +44,9 @@ export const LandingSection = () => (
             <CarouselItem>
               <CarouselTitle>Principal Engineer</CarouselTitle>
               <CarouselDescription>
-                12 years a dev &bull; Former CEO &bull; Former CTO &bull; Full
-                Stack Developer &bull; That Neighbour Who Blasts Music &bull; A
-                Dev Knight
+                {new Date().getFullYear() - 2011} years a dev &bull; Former CEO
+                &bull; Former CTO &bull; Full Stack Developer &bull; That
+                Neighbour Who Blasts Music &bull; A Dev Knight
               </CarouselDescription>
             </CarouselItem>
             <CarouselItem>
