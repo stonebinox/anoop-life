@@ -9,6 +9,7 @@ import { workHistory } from "./work/work-history";
 import { mediaList } from "./media/media-mentions";
 import { PortfolioSection } from "./portfolio-intro";
 import { PortfolioListSection } from "./portfolio";
+import { Footer } from "./footer";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <MediaSection id="media" data={mediaList} white />
         <PortfolioSection />
         <PortfolioListSection />
+        <Footer />
       </div>
     </ParallaxProvider>
   );
