@@ -21,7 +21,7 @@ export const PortfolioSection = () => {
           <TextTitle white>Portfolio</TextTitle>
           <TextDescription white>
             Over the last {new Date().getFullYear() - 2011} years, I've worked
-            on over 50 projects. These projects range from simple single page
+            on over 40 projects. These projects range from simple single page
             applications to full fledged platforms, backend services, and apps.
             The list that follows spans over a decade of work ... so, please
             don't judge me too harshly.

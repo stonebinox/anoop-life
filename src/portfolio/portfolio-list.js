@@ -42,7 +42,7 @@ export const projectList = [
     description:
       "Built a website for an upcoming electric car company in the city.",
     tags: ["ReactJS", "CSS", "HTML", "Netlify"],
-    url: "https://meenmotors.in",
+    url: ["https://meenmotors.in"],
     image: MM,
   },
   {
@@ -62,7 +62,7 @@ export const projectList = [
       "HTML",
       "Chrome Extension",
     ],
-    url: "https://fearn.co",
+    url: ["https://fearn.co"],
     image: Fearn,
   },
   {
@@ -78,7 +78,7 @@ export const projectList = [
     description:
       "Developed a simple single page website as a freelance project for a company that's into social media, software development, and EVs.",
     tags: ["ReactJS", "CSS", "HTML", "Netlify"],
-    url: "https://auroradesignshq.com",
+    url: ["https://auroradesignshq.com"],
     image: AD,
   },
   {
@@ -98,7 +98,7 @@ export const projectList = [
       "CSS",
       "HTML",
     ],
-    url: "https://andela.com",
+    url: ["https://andela.com"],
     image: Andela,
   },
   {
@@ -134,6 +134,7 @@ export const projectList = [
     url: [
       "https://play.google.com/store/apps/details?id=io.constructioncloud&hl=en",
       "https://apps.apple.com/au/app/dashpivot/id1093802452",
+      "https://dashpivot.com",
     ],
     image: Dashpivot,
   },
@@ -142,7 +143,11 @@ export const projectList = [
     description:
       "Worked on this as a freelancer and built their initial version (the one live on the app store). Wheelpair is a US based company that offers an app that lets people monitor their vehicles and ensure they get serviced by mechanics around them. Wheelpair serves as an aggregator of mechanics for users to take advantage of - additionally, users can monitor the health of their car via Wheelpair's proprietary OBD port device.",
     tags: ["React Native", "Python", "PostgresSQL"],
-    url: "https://apps.apple.com/us/app/wheelpair/id1518505527",
+    url: [
+      "https://apps.apple.com/us/app/wheelpair/id1518505527",
+      "https://play.google.com/store/apps/details?id=com.wheelpair.user&hl=en_US&gl=US",
+      "https://wheelpair.com",
+    ],
     image: Wheelpair,
   },
   {
@@ -178,7 +183,7 @@ export const projectList = [
     description:
       "A property management platform. I worked extensively on frontend and backend features for the entire platform.",
     tags: ["Docker", "MySQL", "PHP (Symfony)", "AWS", "jQuery", "CSS", "HTML"],
-    url: "https://rentpost.com",
+    url: ["https://rentpost.com"],
     image: Rentpost,
   },
   {
@@ -186,7 +191,7 @@ export const projectList = [
     description:
       "Reselling platform for designer brands. Designed and developed several admin features for this unique e-commerce platform.",
     tags: ["HTML", "SCSS", "AureliaJS", "NodeJS", "ReactJS", "MongoDB", "AWS"],
-    url: "https://www.novelship.com",
+    url: ["https://www.novelship.com"],
     image: Novelship,
   },
   {
@@ -194,7 +199,7 @@ export const projectList = [
     description:
       "As part of Dust, I worked on a simple platform that allow people to quickly and freely discover online events from around the world. Think WeWorkRemotely for events.",
     tags: ["ReactJS", "PHP", "MySQL", "Heroku"],
-    url: "https://www.novelship.com",
+    url: null,
     image: DustBG,
   },
   {
@@ -202,7 +207,7 @@ export const projectList = [
     description:
       "As a freelancer, I've built embeddable widgets for the company. Widgets that help calculate the market value of a vehicle based on mileage, time, and other factors when provided with the vehicle's VIN. Typically, these widgets needed to be built with minimal external dependencies.",
     tags: ["jQuery", "CSS", "HTML", "PHP", "NodeJS"],
-    url: "https://vinaudit.com",
+    url: ["https://vinaudit.com"],
     image: Vinaudit,
   },
   {
@@ -468,7 +473,7 @@ export const projectList = [
       "CSS",
       "HTML",
     ],
-    url: "https://www.spectralinsights.com",
+    url: ["https://www.spectralinsights.com"],
     image: SpectralBG,
   },
   {
@@ -564,7 +569,7 @@ export const projectList = [
       "CSS",
       "HTML",
     ],
-    url: "https://m.apkpure.com/ecolekt/me.binox.android.ecolekt",
+    url: ["https://m.apkpure.com/ecolekt/me.binox.android.ecolekt"],
     image: EC,
   },
   {
@@ -579,7 +584,7 @@ export const projectList = [
       "PHP (Silex)",
       "MySQL",
     ],
-    url: "https://daredeliver.com",
+    url: ["https://daredeliver.com"],
     image: DD,
   },
   {

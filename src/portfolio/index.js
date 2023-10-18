@@ -6,6 +6,7 @@ import { projectList } from "./portfolio-list";
 import { Parallax } from "react-scroll-parallax";
 import { ArrowButton, WorkDescription, WorkTitle } from "../work/index.styles";
 import Arrow from "../assets/arrow.png";
+import OpenLink from "../assets/open-link.png";
 
 const ListContainer = styled.div`
   width: 100%;
@@ -19,11 +20,6 @@ const ListDetails = styled(Parallax)`
   width: 100%;
   height: auto;
   background: rgb(0, 0, 0);
-  background: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 1) 55%,
-    rgba(255, 255, 255, 0) 100%
-  );
   position: fixed;
   bottom: 0;
   transition: all 0.2s ease;
@@ -61,7 +57,7 @@ const TagsHolder = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 64px;
+  margin-bottom: 16px;
   flex-wrap: wrap;
 `;
 
@@ -78,8 +74,21 @@ const Tag = styled.div`
 
 const ButtonHolder = styled(Parallax)`
   padding: 32px;
-
   width: calc(100% - 64px);
+`;
+
+const LinkIcon = styled.img`
+  width: 24px;
+  height: 24px;
+`;
+
+const LinkHolder = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 64px;
 `;
 
 export const PortfolioListSection = () => {
@@ -103,6 +112,25 @@ export const PortfolioListSection = () => {
     setSelectedProject(selectedProject - 1);
   };
 
+  const renderLink = (url) => {
+    if (url === null) return;
+
+    return url.map((link, key) => {
+      return (
+        <Button
+          key={key}
+          onClick={() => window.open(link, "_blank")}
+          style={{
+            marginBottom: 8,
+            marginLeft: 8,
+          }}
+        >
+          <LinkIcon src={OpenLink} alt="Open Link" />
+        </Button>
+      );
+    });
+  };
+
   return (
     <SectionContainer shouldAlwaysCompleteAnimation speed={-10}>
       <ListContainer image={projectList[selectedProject].image}>
@@ -113,7 +141,10 @@ export const PortfolioListSection = () => {
             </Button>
           </ButtonHolder>
           <ListContent>
-            <ProjectTitle>{projectList[selectedProject].title}</ProjectTitle>
+            <ProjectTitle>
+              {selectedProject + 1}/{projectList.length}:&nbsp;
+              {projectList[selectedProject].title}&nbsp;
+            </ProjectTitle>
             <ProjectDescription>
               {projectList[selectedProject].description}
             </ProjectDescription>
@@ -122,6 +153,9 @@ export const PortfolioListSection = () => {
                 <Tag key={key}>{tag}</Tag>
               ))}
             </TagsHolder>
+            <LinkHolder>
+              {renderLink(projectList[selectedProject].url)}
+            </LinkHolder>
           </ListContent>
           <ButtonHolder shouldAlwaysCompleteAnimation translateX={[60, -30]}>
             <Button onClick={nextProject} dark style={{ margin: "0 auto" }}>
