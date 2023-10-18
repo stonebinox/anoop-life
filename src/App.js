@@ -19,8 +19,13 @@ function App() {
         <LandingSection />
         <CategorySection />
         <TechSection />
-        <WorkSection id="work" data={workHistory} />
-        <MediaSection id="media" data={mediaList} white />
+        <WorkSection id="work" data={workHistory} title="Work History" />
+        <MediaSection
+          id="media"
+          data={mediaList}
+          white
+          title="Media Mentions"
+        />
         <PortfolioSection />
         <PortfolioListSection />
         <Footer />

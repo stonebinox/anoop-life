@@ -12,8 +12,10 @@ import {
   ButtonHolder,
   ArrowButton,
 } from "./index.styles";
+import OpenLink from "../assets/open-link.png";
+import { LinkIcon } from "../portfolio/index.styles";
 
-export const WorkSection = ({ data = [], white = null, id }) => {
+export const WorkSection = ({ data = [], white = null, id, title }) => {
   const [selectedWork, setSelectedWork] = useState(0);
 
   const nextWork = () => {
@@ -54,7 +56,7 @@ export const WorkSection = ({ data = [], white = null, id }) => {
     <SectionContainer id={id} speed={-10} shouldAlwaysCompleteAnimation>
       <WorkContainer image={data[selectedWork].background}>
         <WorkContentContainer white={white}>
-          <SectionTitle white={white}>Work History</SectionTitle>
+          <SectionTitle white={white}>{title}</SectionTitle>
           <WorkIcon
             image={data[selectedWork].icon}
             onClick={() => linkClick(data[selectedWork].link)}
@@ -69,6 +71,14 @@ export const WorkSection = ({ data = [], white = null, id }) => {
             <Button onClick={prevWork} dark={white}>
               <ArrowButton src={Arrow} alt="Previous" className="prev" />
             </Button>
+            {title === "Work History" && (
+              <Button
+                dark={white}
+                onClick={() => linkClick(data[selectedWork].link)}
+              >
+                <LinkIcon src={OpenLink} alt="Open Link" />
+              </Button>
+            )}
             <Button onClick={nextWork} dark={white}>
               <ArrowButton src={Arrow} alt="Next" />
             </Button>
