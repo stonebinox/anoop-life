@@ -16,7 +16,7 @@ import {
   Tag,
   LinkHolder,
   LinkIcon,
-} from "./idnex.styles";
+} from "./index.styles";
 
 export const PortfolioListSection = () => {
   const [selectedProject, setSelectedProject] = useState(0);

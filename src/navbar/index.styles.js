@@ -30,6 +30,7 @@ export const LogoHolder = styled.div`
 export const LogoItem = styled.img`
   width: 50px;
   border: 0;
+  cursor: pointer;
 `;
 
 export const NavLinksContainer = styled.div`
