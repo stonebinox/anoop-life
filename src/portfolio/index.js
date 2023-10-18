@@ -17,6 +17,7 @@ import {
   LinkHolder,
   LinkIcon,
 } from "./index.styles";
+import { checkDisabledStatus } from "../utils/utils";
 
 export const PortfolioListSection = () => {
   const [selectedProject, setSelectedProject] = useState(0);
@@ -59,10 +60,22 @@ export const PortfolioListSection = () => {
   };
 
   return (
-    <SectionContainer shouldAlwaysCompleteAnimation speed={-10}>
+    <SectionContainer
+      shouldAlwaysCompleteAnimation
+      speed={-10}
+      disabled={checkDisabledStatus()}
+    >
       <ListContainer image={projectList[selectedProject].image}>
-        <ListDetails shouldAlwaysCompleteAnimation translateY={[-40, 0]}>
-          <ButtonHolder shouldAlwaysCompleteAnimation translateX={[-60, 30]}>
+        <ListDetails
+          shouldAlwaysCompleteAnimation
+          translateY={[-40, 0]}
+          disabled={checkDisabledStatus()}
+        >
+          <ButtonHolder
+            shouldAlwaysCompleteAnimation
+            translateX={[-60, 30]}
+            disabled={checkDisabledStatus()}
+          >
             <Button onClick={prevProject} dark style={{ margin: "0 auto" }}>
               <ArrowButton src={Arrow} alt="Previous" className="prev" />
             </Button>
@@ -84,7 +97,11 @@ export const PortfolioListSection = () => {
               {renderLink(projectList[selectedProject].url)}
             </LinkHolder>
           </ListContent>
-          <ButtonHolder shouldAlwaysCompleteAnimation translateX={[60, -30]}>
+          <ButtonHolder
+            shouldAlwaysCompleteAnimation
+            translateX={[60, -30]}
+            disabled={checkDisabledStatus()}
+          >
             <Button onClick={nextProject} dark style={{ margin: "0 auto" }}>
               <ArrowButton src={Arrow} alt="Next" />
             </Button>

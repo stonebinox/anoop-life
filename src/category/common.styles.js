@@ -26,4 +26,9 @@ export const Button = styled.div`
     opacity: 1;
     background-color: ${({ dark }) => (dark ? "#fff" : "#111")};
   }
+
+  @media only screen and (max-width: 600px) {
+    width: 40px;
+    height: 40px;
+  }
 `;

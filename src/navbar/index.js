@@ -31,28 +31,28 @@ export const Navbar = () => {
         </LogoHolder>
         <NavLinksContainer>
           <NavLink
-            href="#"
+            href="#about"
             className={activeLink === "about" && "active"}
             onClick={(e) => linkClick("about", e)}
           >
             about
           </NavLink>
           <NavLink
-            href="#"
+            href="#work"
             className={activeLink === "work" && "active"}
             onClick={(e) => linkClick("work", e)}
           >
             work
           </NavLink>
           <NavLink
-            href="#"
+            href="#media"
             className={activeLink === "media" && "active"}
             onClick={(e) => linkClick("media", e)}
           >
             media
           </NavLink>
           <NavLink
-            href="#"
+            href="#portfolio"
             className={activeLink === "portfolio" && "active"}
             onClick={(e) => linkClick("portfolio", e)}
           >

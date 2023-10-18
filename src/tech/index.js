@@ -7,10 +7,19 @@ import {
   TextTitle,
   TextDescription,
 } from "./index.styles";
+import { checkDisabledStatus } from "../utils/utils";
 
 export const TechSection = () => (
-  <SectionContainer speed={-10} shouldAlwaysCompleteAnimation>
-    <TextContainer translateY={[60, 0]} shouldAlwaysCompleteAnimation>
+  <SectionContainer
+    speed={-10}
+    shouldAlwaysCompleteAnimation
+    disabled={checkDisabledStatus()}
+  >
+    <TextContainer
+      translateY={[60, 0]}
+      shouldAlwaysCompleteAnimation
+      disabled={checkDisabledStatus()}
+    >
       <TextWrapper>
         <TextTitle>Tech Stack</TextTitle>
         <TextDescription>
