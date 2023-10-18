@@ -14,7 +14,7 @@ import { Footer } from "./footer";
 function App() {
   return (
     <ParallaxProvider>
-      <div>
+      <div style={{ overflow: "hidden" }}>
         <Navbar />
         <LandingSection />
         <CategorySection />
