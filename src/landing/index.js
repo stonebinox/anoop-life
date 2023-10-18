@@ -16,14 +16,20 @@ import {
 } from "./index.styles";
 import LandingVideo from "../assets/videos/landing.mp4";
 import { SectionContainer } from "../category/common.styles";
+import { checkDisabledStatus } from "../utils/utils";
 
 export const LandingSection = () => (
   <SectionContainer
     id="about"
     translateY={[0, -10]}
     shouldAlwaysCompleteAnimation
+    disabled={checkDisabledStatus()}
   >
-    <SectionContent translateY={[0, 40]} shouldAlwaysCompleteAnimation>
+    <SectionContent
+      translateY={[0, 40]}
+      shouldAlwaysCompleteAnimation
+      disabled={checkDisabledStatus()}
+    >
       <NameContainer>
         <FirstName>ANOOP</FirstName>
         <LastName>SANTHANAM</LastName>

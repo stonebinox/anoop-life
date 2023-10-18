@@ -14,6 +14,7 @@ import {
 } from "./index.styles";
 import OpenLink from "../assets/open-link.png";
 import { LinkIcon } from "../portfolio/index.styles";
+import { checkDisabledStatus } from "../utils/utils";
 
 export const WorkSection = ({ data = [], white = null, id, title }) => {
   const [selectedWork, setSelectedWork] = useState(0);
@@ -53,9 +54,14 @@ export const WorkSection = ({ data = [], white = null, id, title }) => {
   }, [data]);
 
   return (
-    <SectionContainer id={id} speed={-10} shouldAlwaysCompleteAnimation>
+    <SectionContainer
+      id={id}
+      speed={-10}
+      shouldAlwaysCompleteAnimation
+      disabled={checkDisabledStatus()}
+    >
       <WorkContainer image={data[selectedWork].background}>
-        <WorkContentContainer white={white}>
+        <WorkContentContainer white={white} disabled={checkDisabledStatus()}>
           <SectionTitle white={white}>{title}</SectionTitle>
           <WorkIcon
             image={data[selectedWork].icon}
@@ -71,7 +77,7 @@ export const WorkSection = ({ data = [], white = null, id, title }) => {
             <Button onClick={prevWork} dark={white}>
               <ArrowButton src={Arrow} alt="Previous" className="prev" />
             </Button>
-            {title === "Work History" && (
+            {title === "Work History" && data[selectedWork].link && (
               <Button
                 dark={white}
                 onClick={() => linkClick(data[selectedWork].link)}

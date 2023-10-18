@@ -15,6 +15,7 @@ import Music1 from "../assets/music-1.png";
 import Music2 from "../assets/music-2.png";
 import Music3 from "../assets/music-3.png";
 import Music4 from "../assets/music-4.png";
+import { checkDisabledStatus } from "../utils/utils";
 
 const CategoryContainer = styled.div`
   width: 100%;
@@ -23,6 +24,12 @@ const CategoryContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 64px;
+  }
 `;
 
 const Category = styled(Parallax)`
@@ -35,6 +42,15 @@ const Category = styled(Parallax)`
 
   &:hover {
     height: 100vh;
+  }
+
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    height: 33vh;
+
+    &:hover {
+      height: 33vh;
+    }
   }
 `;
 
@@ -89,12 +105,17 @@ export const CategorySection = () => {
   }, []);
 
   return (
-    <SectionContainer speed={-10} shouldAlwaysCompleteAnimation>
+    <SectionContainer
+      speed={-10}
+      shouldAlwaysCompleteAnimation
+      disabled={checkDisabledStatus()}
+    >
       <CategoryContainer>
         <Category
           translateX={[-20, 0]}
           shouldAlwaysCompleteAnimation
           image={hobbyImage}
+          disabled={checkDisabledStatus()}
         >
           <CategoryCover>
             <CategoryTitle>Hobbies</CategoryTitle>
@@ -104,6 +125,7 @@ export const CategorySection = () => {
           translateY={[20, 0]}
           shouldAlwaysCompleteAnimation
           image={workImage}
+          disabled={checkDisabledStatus()}
         >
           <CategoryCover>
             <CategoryTitle>Tech</CategoryTitle>
@@ -113,6 +135,7 @@ export const CategorySection = () => {
           translateX={[20, 0]}
           shouldAlwaysCompleteAnimation
           image={musicImage}
+          disabled={checkDisabledStatus()}
         >
           <CategoryCover>
             <CategoryTitle>Music</CategoryTitle>

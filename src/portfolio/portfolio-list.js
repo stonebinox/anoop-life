@@ -351,7 +351,7 @@ export const projectList = [
   {
     title: "Senca",
     description:
-      "A research webapp for UK based client that displays content as suggestions to people who are composing a research article as they type. It hosts a dashboard for admins to specify data sources to provide it with resources to know where to suggest content from.",
+      "A research webapp for UK based client that displays content as suggestions to people while composing research articles as they type. It hosts a dashboard for admins to specify data sources to provide it with resources to know where to suggest content from.",
     tags: [
       "AngularJS",
       "ContentTools",

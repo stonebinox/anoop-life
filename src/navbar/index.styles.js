@@ -10,6 +10,10 @@ export const NavbarWrapper = styled.div`
     rgba(0, 0, 0, 1) 0%,
     rgba(255, 255, 255, 0) 100%
   );
+
+  @media only screen and (max-width: 600px) {
+    background: #000;
+  }
 `;
 
 export const NavbarContainer = styled.div`
@@ -21,6 +25,10 @@ export const NavbarContainer = styled.div`
   max-width: 1280px;
   margin: 0 auto;
   height: 80px;
+
+  @media only screen and (max-width: 600px) {
+    max-width: 100%;
+  }
 `;
 
 export const LogoHolder = styled.div`
@@ -62,5 +70,9 @@ export const NavLink = styled.a`
 
   &.active {
     text-decoration: underline;
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: 20px;
   }
 `;

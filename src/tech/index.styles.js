@@ -6,6 +6,12 @@ export const TextContainer = styled(Parallax)`
   max-width: 1280px;
   margin: 0 auto;
   height: 100%;
+
+  @media only screen and (max-width: 600px) {
+    max-width: 100%;
+    height: auto;
+    margin-top: 256px;
+  }
 `;
 
 export const TextWrapper = styled.div`
@@ -15,6 +21,11 @@ export const TextWrapper = styled.div`
   align-items: left;
   width: 100%;
   height: auto;
+
+  @media only screen and (max-width: 600px) {
+    padding: 16px;
+    width: calc(100% - 32px);
+  }
 `;
 
 export const TextTitle = styled.div`
@@ -23,6 +34,12 @@ export const TextTitle = styled.div`
   color: ${({ white }) => (white ? `#333` : `#efefef`)};
   font-weight: 300;
   text-align: left;
+
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    font-size: 44px;
+    text-align: center;
+  }
 `;
 
 export const TextDescription = styled(TextTitle)`
@@ -34,5 +51,10 @@ export const TextDescription = styled(TextTitle)`
 
   & > .small {
     font-size: 16px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: 22px;
+    text-align: center;
   }
 `;

@@ -34,10 +34,18 @@ export const FirstName = styled.div`
   font-weight: 400;
   line-height: normal;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  @media only screen and (max-width: 600px) {
+    font-size: 96px;
+  }
 `;
 
 export const LastName = styled(FirstName)`
   font-size: 70px;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 54px;
+  }
 `;
 
 export const SectionContent = styled(Parallax)`
@@ -52,6 +60,11 @@ export const SectionContent = styled(Parallax)`
 export const AboutCarouselContainer = styled.div`
   width: 100%;
   margin-top: 80px;
+
+  @media only screen and (max-width: 600px) {
+    margin-top: 40px;
+    margin-bottom: 32px;
+  }
 `;
 
 export const CarouselItem = styled.div`
@@ -64,6 +77,11 @@ export const CarouselItem = styled.div`
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 48px;
+
+  @media only screen and (max-width: 600px) {
+    max-width: 100%;
+    padding: 8px;
+  }
 `;
 
 export const CarouselTitle = styled.div`
@@ -74,9 +92,17 @@ export const CarouselTitle = styled.div`
   margin: 0 auto;
   width: 100%;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  @media only screen and (max-width: 600px) {
+    font-size: 32px;
+  }
 `;
 
 export const CarouselDescription = styled(CarouselTitle)`
   font-size: 16px;
   margin-top: 16px;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 20px;
+  }
 `;

@@ -7,6 +7,7 @@ import {
   TextTitle,
   TextWrapper,
 } from "../tech/index.styles";
+import { checkDisabledStatus } from "../utils/utils";
 
 export const PortfolioSection = () => {
   return (
@@ -15,8 +16,13 @@ export const PortfolioSection = () => {
       speed={-10}
       shouldAlwaysCompleteAnimation
       white
+      disabled={checkDisabledStatus()}
     >
-      <TextContainer translateY={[80, 0]} shouldAlwaysCompleteAnimation>
+      <TextContainer
+        translateY={[80, 0]}
+        shouldAlwaysCompleteAnimation
+        disabled={checkDisabledStatus()}
+      >
         <TextWrapper>
           <TextTitle white>Portfolio</TextTitle>
           <TextDescription white>
