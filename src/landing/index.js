@@ -62,7 +62,7 @@ export const LandingSection = () => (
             <CarouselItem>
               <CarouselTitle>Location</CarouselTitle>
               <CarouselDescription>
-                Dubai, UAE but I travel a lot &bull; Digital Nomad &bull;
+                Florence, Italy, and I travel a lot &bull; Digital Nomad &bull;
                 Indian-born
               </CarouselDescription>
             </CarouselItem>
