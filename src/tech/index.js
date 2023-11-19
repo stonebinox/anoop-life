@@ -14,6 +14,7 @@ export const TechSection = () => (
     speed={-10}
     shouldAlwaysCompleteAnimation
     disabled={checkDisabledStatus()}
+    id="tech"
   >
     <TextContainer
       translateY={[60, 0]}

@@ -39,6 +39,8 @@ const Category = styled(Parallax)`
   cursor: pointer;
   background: url(${({ image }) => image}) center;
   background-size: cover;
+  border: 2px solid
+    ${({ isSelected }) => isSelected && `rgba(255, 255, 255, 1.0)`};
 
   &:hover {
     height: 100vh;
@@ -80,7 +82,7 @@ const workImages = [Work1, Work2, Work3];
 const hobbyImages = [Hobby1, Hobby2, Hobby3];
 const musicImages = [Music1, Music2, Music3, Music4];
 
-export const CategorySection = () => {
+export const CategorySection = ({ setCategory, selectedCategory }) => {
   const [workImage, setWorkImage] = useState(workImages[0]);
   const [hobbyImage, setHobbyImage] = useState(hobbyImages[0]);
   const [musicImage, setMusicImage] = useState(musicImages[0]);
@@ -97,6 +99,16 @@ export const CategorySection = () => {
 
       changeImages();
     }, 3000);
+  };
+
+  const categoryClick = (category) => {
+    setCategory(category);
+
+    setTimeout(() => {
+      if (document.getElementById(category)) {
+        document.getElementById(category).scrollIntoView(true);
+      }
+    }, 500);
   };
 
   useEffect(() => {
@@ -116,6 +128,8 @@ export const CategorySection = () => {
           shouldAlwaysCompleteAnimation
           image={hobbyImage}
           disabled={checkDisabledStatus()}
+          onClick={() => categoryClick("hobbies")}
+          isSelected={"hobbies" === selectedCategory}
         >
           <CategoryCover>
             <CategoryTitle>Hobbies</CategoryTitle>
@@ -126,6 +140,8 @@ export const CategorySection = () => {
           shouldAlwaysCompleteAnimation
           image={workImage}
           disabled={checkDisabledStatus()}
+          onClick={() => categoryClick("tech")}
+          isSelected={"tech" === selectedCategory}
         >
           <CategoryCover>
             <CategoryTitle>Tech</CategoryTitle>
@@ -136,6 +152,8 @@ export const CategorySection = () => {
           shouldAlwaysCompleteAnimation
           image={musicImage}
           disabled={checkDisabledStatus()}
+          onClick={() => categoryClick("music")}
+          isSelected={"music" === selectedCategory}
         >
           <CategoryCover>
             <CategoryTitle>Music</CategoryTitle>
